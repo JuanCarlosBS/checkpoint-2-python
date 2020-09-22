@@ -11,9 +11,13 @@ while menu != 7:
     print('\nMenu')
     menu = int(input(
         "\t1. Cadastrar Loja\n\t2. Listar Produtos por Loja\n\t3. Cadastrar Lojas\n\t4. Sair\n"))
-        
+
     if menu == 1:
-        store.create()
+        authentication.authenticationPossibleCreateStore()
+        if settings.possibleCreateStore == True : 
+            store.create()
+        else :
+            print("Não é possivel cadastrar mais lojas")
     elif menu == 2:
         print("opção 2")
     elif menu == 3:     
