@@ -1,4 +1,5 @@
 import settings
+import storage
 
 
 def create() :
@@ -8,7 +9,7 @@ def create() :
 
         while storeIsValid != True:
             id = int(input('ESCREVA O CÓDIGO DA LOJA: '))
-            found_item = list(filter(lambda _product: _product['id'] == id, settings.store))
+            found_item = list(filter(lambda _store: _store['id'] == id, settings.store))
             if len(found_item) > 0:
                 print('CÓDIGO JÁ EXISTENTE.')
             elif id == 0:
@@ -30,3 +31,13 @@ def create() :
         cont += 1
 
     return settings.store
+
+
+def index():
+    for index in range(len(settings.store)):
+        idStore = settings.store[index]['id']
+        nameStore = settings.store[index]['name'].upper()
+        print(f'{idStore} - {nameStore}\n')
+        storage.index(index)
+        print('\n')
+    print('\n')
