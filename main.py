@@ -19,7 +19,7 @@ while menu != 7:
         else :
             print("Não é possivel cadastrar mais lojas")
     elif menu == 2:
-        print("opção 2")
+        storage.create()
     elif menu == 3:     
         print("opção 3")
     elif menu == 4:

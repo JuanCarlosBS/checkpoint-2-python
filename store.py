@@ -25,7 +25,7 @@ def create() :
 
         settings.store.append(store)
 
-        print('PRODUTO CADASTRADO COM SUCESSO.')
+        print('LOJA CADASTRADA COM SUCESSO.')
 
         cont += 1
 
