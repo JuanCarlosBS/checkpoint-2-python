@@ -43,9 +43,6 @@ def index(indexStore):
     print('-'*32)
     for index in range(len(settings.storage)): 
         idStorage = settings.storage[index]['id']
-        priceStorage = priceStore = settings.storage[index]['price']
+        priceStorage = settings.storage[index]['price']
         priceStore = settings.storage[index]['price'][indexStore]
         print(f'{idStorage} \t {"R$ {:,.2f}".format(priceStore)}')
-        minPrice = min(priceStorage)
-        settings.lowestPrice.append(minPrice)
-

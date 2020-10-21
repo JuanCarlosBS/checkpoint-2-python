@@ -5,7 +5,7 @@ def init() :
     global store
     global storage
     global possibleCreateStore
-    global lowestPrice
+
 
     menu = 0 
     store = [
@@ -57,4 +57,3 @@ def init() :
         }
     ]
     possibleCreateStore = True
-    lowestPrice = []
